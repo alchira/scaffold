@@ -1,0 +1,104 @@
+// Original spacing scale map
+$spacing-rems: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  32: 8rem,
+  40: 10rem,
+  48: 12rem,
+  56: 14rem,
+  64: 16rem,
+);
+
+@mixin generate-spacing-utilities($prefix, $property, $include-auto: false) {
+  @if $include-auto {
+    .#{$prefix}-auto {
+      #{$property}: auto;
+    }
+  }
+
+  @each $key, $value in $spacing-rems {
+    .#{$prefix}-#{$key} {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+@include generate-spacing-utilities(gap, gap, false);
+
+// Generate margin classes
+@include generate-spacing-utilities(m, margin, true);
+@include generate-spacing-utilities(mx, margin-inline, true);
+@include generate-spacing-utilities(my, margin-block, true);
+
+// Generate padding classes
+@include generate-spacing-utilities(p, padding, true);
+@include generate-spacing-utilities(px, padding-inline, true);
+@include generate-spacing-utilities(py, padding-block, true);
+
+// Border styles
+$border-styles: none, solid, dashed, dotted, double;
+
+@each $style in $border-styles {
+  .border-#{$style} {
+    border-style: $style;
+  }
+}
+
+// Outline styles
+$outline-styles: none, solid, dashed, dotted, double;
+
+@each $style in $outline-styles {
+  .outline-#{$style} {
+    outline-style: $style;
+  }
+}
+
+@each $key, $value in $spacing-rems {
+  .outline-#{$key} {
+    outline: $value;
+  }
+}
+
+@each $key, $value in $spacing-rems {
+  .radius-#{$key} {
+    border-radius: $value;
+  }
+}
+
+.radius-full {
+  border-radius: 50%;
+}
+
+// Width utilities
+$scales-percent: (
+  auto: auto,
+  0: 0,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+@each $key, $value in $scales-percent {
+  .w-#{$key} {
+    width: $value;
+  }
+}
+
+
+@each $key, $value in $scales-percent {
+  .h-#{$key} {
+    height: $value;
+  }
+}

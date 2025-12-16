@@ -1,0 +1,45 @@
+{
+  "name": "xcaffold",
+  "version": "0.0.0",
+  "configs": {
+    "name": "scaffold",
+    "version": "0.0.0",
+    "sandbox": "sandbox",
+    "blueprint": "blueprint",
+    "libraries": "libraries"
+  },
+  "scripts": {
+    "lib:build": "npx sass libsource:libraries --no-source-map",
+    "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
+    "box:build": "npx xtx preview",
+    "box:watch": "npx xtx watch",
+    "build": "npm install && npm run lib:build && npm run box:build"
+  },
+  "type": "module",
+  "description": "Template for creating flavours for Xtatix.",
+  "license": "MIT",
+  "homepage": "https://www.xtatix.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtatixone/xcaffold"
+  },
+  "author": {
+    "name": "Vyshnav Prasad",
+    "url": "https://www.yshell.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/xtatixone/xcaffold/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/yshelldev"
+  },
+  "keywords": [
+    "css",
+    "xtatix-template",
+    "css-framework"
+  ],
+  "devDependencies": {
+    "sass": "latest"
+  }
+}

@@ -1,0 +1,13 @@
+.git
+.github
+.gitmodules
+
+xtatix
+sandsrc
+libsource
+node_modules
+package-lock.json
+
+sandbox/**
+!sandbox/index.html
+!blueprint/libraries/.gitignore

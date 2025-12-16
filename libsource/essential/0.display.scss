@@ -1,0 +1,141 @@
+// Display utilities
+$display-utilities: (
+    none: none,
+    block: block,
+    inline: inline,
+    inline-block: inline-block,
+    flex: flex,
+    inline-flex: inline-flex,
+    grid: grid,
+    inline-grid: inline-grid,
+    table: table,
+    table-row: table-row,
+    table-cell: table-cell
+);
+
+@each $name, $value in $display-utilities {
+    .d-#{$name} {
+        display: $value;
+    }
+}
+
+// Visibility utilities
+$visibility-utilities: (
+    hidden: hidden,
+    visible: visible,
+    collapse: collapse
+);
+
+@each $name, $value in $visibility-utilities {
+    .visibility-#{$name} {
+        visibility: $value;
+    }
+}
+
+// Overflow utilities
+$overflow-utilities: (
+    auto: auto,
+    hidden: hidden,
+    scroll: scroll
+);
+
+@each $name, $value in $overflow-utilities {
+    .overflow-#{$name} {
+        overflow: $value;
+    }
+}
+
+// Cursor utilities
+$cursor-utilities: (
+    pointer: pointer,
+    default: default
+);
+
+@each $name, $value in $cursor-utilities {
+    .cursor-#{$name} {
+        cursor: $value;
+    }
+}
+
+// Flexbox utilities
+$flex-direction-utilities: (
+    row: row,
+    column: column
+);
+
+@each $name, $value in $flex-direction-utilities {
+    .flex-#{$name} {
+        flex-direction: $value;
+    }
+}
+
+$flex-wrap-utilities: (
+    wrap: wrap,
+    nowrap: nowrap
+);
+
+@each $name, $value in $flex-wrap-utilities {
+    .flex-#{$name} {
+        flex-wrap: $value;
+    }
+}
+
+$justify-content-utilities: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around
+);
+
+@each $name, $value in $justify-content-utilities {
+    .justify-#{$name} {
+        justify-content: $value;
+    }
+}
+
+$align-items-utilities: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    stretch: stretch
+);
+
+@each $name, $value in $align-items-utilities {
+    .align-#{$name} {
+        align-items: $value;
+    }
+}
+
+// Opacity utilities (0–1.2 step 0.05)
+$opacity-utilities: (
+    0: 0,
+    5: 0.05,
+    10: 0.1,
+    15: 0.15,
+    20: 0.2,
+    25: 0.25,
+    30: 0.3,
+    35: 0.35,
+    40: 0.4,
+    45: 0.45,
+    50: 0.5,
+    55: 0.55,
+    60: 0.6,
+    65: 0.65,
+    70: 0.7,
+    75: 0.75,
+    80: 0.8,
+    85: 0.85,
+    90: 0.9,
+    95: 0.95,
+    100: 1,
+    110: 1.1,
+    120: 1.2
+);
+
+@each $key, $value in $opacity-utilities {
+    .opacity-#{$key} {
+        opacity: $value;
+    }
+}
