@@ -12,8 +12,8 @@
   "scripts": {
     "lib:build": "npx sass libraries-src:libraries --no-source-map",
     "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
-    "box:build": "npx al preview",
-    "box:watch": "npx al watch",
+    "pad:build": "npx al preview",
+    "pad:watch": "npx al watch",
     "build": "npm install && npm run lib:build && npm run box:build"
   },
   "type": "module",

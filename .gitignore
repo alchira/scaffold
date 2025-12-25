@@ -1,5 +1,5 @@
-sketchpad
 libraries
 node_modules
 package-lock.json
-!sketchpad/index.html
+sketchpad/**
+!/sketchpad/index.html
