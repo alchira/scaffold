@@ -18,7 +18,7 @@
   },
   "type": "module",
   "license": "MIT",
-  "homepage": "https://www.alchira.io",
+  "homepage": "https://github.com/alchira",
   "repository": {
     "type": "git",
     "url": "https://github.com/alchira/scaffold"

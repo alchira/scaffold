@@ -6,7 +6,7 @@ Use this repository as a template to create your own Alchira frameworks and flav
 
 - [Installation](#installation)
 - [Create Flavour](#how-to-spin-your-flavour)
-- [Learn Alchira Basics](https://www.alchira.io/documentation)
+- [Learn Alchira Basics](https://github.com/alchira/documentation)
 
 # Installation
 
